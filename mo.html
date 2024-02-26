@@ -1,0 +1,85 @@
+<!-- @format -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="download.png" type="image/x-icon" />
+    <link rel="stylesheet" href="style.css" />
+    <title>جبل حفيت</title>
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="logo">
+        <a href="index.html"><img src="logo.png" /></a>
+        <a href="index.html"><h2>[جبل حفيت]</h2></a>
+      </div>
+      <div class="links">
+        <a class="no" href="about_us.html">عنا</a>
+        <a class="no" href="ex.html">استكشافات</a>
+        <a class="no" href="comp.html">تكوينه</a>
+        <a class="no" href="what_is_it.html">ما هو ؟</a>
+        <a class="no" href="introduction.html">مقدمة</a>
+        <div class="dropdown">
+          <a href="#"
+            >Explore
+            <img src="chevron.png" />
+          </a>
+          <div class="menu">
+            <a href="introduction.html"> مقدمة </a>
+            <a href="what_is_it.html"> ما هو ؟ </a>
+            <a href="comp.html"> تكوينه </a>
+            <a href="mo.html"> حرف </a>
+            <a href="ex.html"> استكشافات </a>
+            <a href="about_us.html"> عنا </a>
+          </div>
+        </div>
+        <a href="#" class="join-link"> Join </a>
+      </div>
+    </nav>
+    <div class="flexx">
+      <div class="mr-container">
+        <img class="" src="7.jpg" alt="lady" />
+        <div class="addos" onclick="toggleAudio(event)">
+          <audio
+            id="myAudio"
+            controls
+            style="display: none"
+            onended="resetAudio()">
+            <source src="./Aud4.mp3" type="audio/ogg" />
+          </audio>
+          <span id="playPauseButton">▶</span>
+        </div>
+      </div>
+      <img class="lady-girl" src="./girlll.png" alt="lady" />
+
+      <div class="mr-container-two">
+        <div class="article-1">
+          تشير البقايا الأثرية التي وجدت في جبل حفيت على ظهور حرفة الصناعة و
+          ايضاً دل على وجود اكثر من 500 مدفن من المدافن الحجرية .
+        </div>
+      </div>
+    </div>
+
+    <script>
+      function toggleAudio(event) {
+        event.preventDefault(); // Prevent the default action
+        var audio = document.getElementById("myAudio");
+        var button = document.getElementById("playPauseButton");
+        if (audio.paused) {
+          audio.play();
+          button.textContent = "∣∣";
+        } else {
+          audio.pause();
+          button.textContent = "▶";
+        }
+      }
+
+      function resetAudio() {
+        var button = document.getElementById("playPauseButton");
+        button.textContent = "▶";
+      }
+    </script>
+  </body>
+</html>
